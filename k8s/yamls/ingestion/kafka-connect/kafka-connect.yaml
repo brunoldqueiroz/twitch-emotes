@@ -4,14 +4,14 @@ metadata:
   # kafka connect cluster name
   name: edh
   annotations:
-     strimzi.io/use-connector-resources: "true"
+    strimzi.io/use-connector-resources: "true"
   labels:
     app: edh
 spec:
-  version: 3.0.0
+  version: 3.7.1
   replicas: 1
   bootstrapServers: edh-kafka-bootstrap:9093
-  image: mateushenrique/owshq-kafka-connect-strimzi:3.0.0
+  image: mateushenrique/owshq-kafka-connect-strimzi:3.7.1.1
   # imagePullPolicy: Always
   tls:
     trustedCertificates:
@@ -48,11 +48,11 @@ spec:
     #config.providers.file.class: org.apache.kafka.common.config.provider.FileConfigProvider
   resources:
     requests:
-        memory: 2Gi
-        cpu: 500m
+      memory: 2Gi
+      cpu: 500m
     limits:
-        memory: 3Gi
-        cpu: 1000m
+      memory: 3Gi
+      cpu: 1000m
   metricsConfig:
     type: jmxPrometheusExporter
     valueFrom:
