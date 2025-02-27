@@ -42,7 +42,7 @@ spec:
       inter.broker.protocol.version: "3.7"
       log.retention.hours: 2160
     storage:
-      type: jbod
+      type: ephemeral
       volumes:
         - id: 0
           type: persistent-claim
