@@ -11,7 +11,7 @@ spec:
     # broker version
     version: 3.7.1
     # initial replicas
-    replicas: 1
+    replicas: 2
     # provision lbs
     listeners:
       - name: plain
@@ -69,7 +69,7 @@ spec:
           key: kafka-metrics-config.yml
   # zookeeper information
   zookeeper:
-    replicas: 1
+    replicas: 2
     storage:
       type: persistent-claim
       size: 10Gi
